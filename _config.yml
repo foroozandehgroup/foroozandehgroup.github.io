@@ -30,10 +30,11 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  foroozandehgroup
 
 # Build settings
-theme: jekyll-theme-hamilton
+# theme: jekyll-theme-hamilton  # Hamilton is not natively supported by GH pages...
 plugins:
   - jekyll-feed
   - jekyll-theme-hamilton
+remote_theme: ngzhio/jekyll-theme-hamilton  # ...this is the workaround.
 skin: daylight
 
 # Default global variables for every post, see
