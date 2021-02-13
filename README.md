@@ -17,7 +17,9 @@ The site is currently built using [Jekyll](https://jekyllrb.com/).
 
 **Adding a new post**
 
-See https://jekyllrb.com/docs/posts/. (_This_ markdown file, `README.md`, does not contain "front matter" and is therefore not parsed by Jekyll; it only serves as a readme on the GitHub repo itself.)
+Create a new file in the `_posts` directory called `YYYY-MM-DD-title.md`. (The title can be anything you like, but it will be turned into the URL of the website so probably a good idea to choose something sensible.)
+
+As for writing the post itself, see https://jekyllrb.com/docs/posts/. (_This_ markdown file, `README.md`, does not contain "front matter" and is therefore not parsed by Jekyll; it only serves as a readme on the GitHub repo itself.)
 
 -----------
 
