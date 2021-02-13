@@ -30,9 +30,20 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  foroozandehgroup
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hamilton
 plugins:
   - jekyll-feed
+  - jekyll-theme-hamilton
+skin: daylight
+
+# Default global variables for every post, see
+# https://jekyllrb.com/docs/configuration/front-matter-defaults/
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      math: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
