@@ -199,7 +199,7 @@
  * Site sidebar
  */
 .site-sidebar {
-  margin-top: $spacing-unit * 0.7;
+  margin-top: $spacing-unit * 1;
   padding: $spacing-unit * 0.25;
   border-right: 1px solid;
   @include relative-font-size(0.8);
@@ -422,8 +422,8 @@ p.social-icons {
  * Posts
  */
 .post-header {
-  padding-top: $spacing-unit * 1.5;
-  padding-bottom: $spacing-unit * 0.8;
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit * 0.5;
   border-bottom: 1px solid;
   margin-bottom: $spacing-unit * 1.5;
   text-align: center;
