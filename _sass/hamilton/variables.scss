@@ -7,17 +7,24 @@
 // to set this up (Google Fonts will give you a bunch of HTML code to load the
 // fonts and you can just copy-paste this in directly)
 
-// Non-header text on index.md
-$base-font-family: "PT Sans" !default;
-// Plain text in posts
-$reading-font-family: "PT Sans", !default;
-// Post headings, as well as post preview in front page
-$headline-font-family: "PT Sans", !default;
-// Monospace font for all code
+// Monospace font used for all code
 $code-font-family:  "Fira Mono" !default;
-// Website header in index.md (theme-dependent)
-$handwriting-font-family: "Lato", !default;
 
+////// Posts ///////
+// Titles
+$post-title-font-family: "PT Sans", !default;
+// h1, h2, ... h6 headings
+$post-heading-font-family: "PT Sans", !default;
+// Ordinary content
+$post-content-font-family: "PT Sans", !default;
+
+////// Front page and header ///////
+// Website title (at top-left corner)
+$site-title-font-family: "Lato", !default;
+// Everything else on the front page
+$base-font-family: "PT Sans" !default;
+
+// Font sizes
 $base-font-size:    18px !default;
 $code-font-size:    16px !default;
 $base-line-height:  1.4 !default;

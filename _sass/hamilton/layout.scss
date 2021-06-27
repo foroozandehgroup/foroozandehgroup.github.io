@@ -41,12 +41,14 @@
 
 .site-title {
   @include relative-font-size(1.625);
-  font-family: $handwriting-font-family;
+  font-family: $site-title-font-family;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
 
   @include media-query($on-small) {
+    margin-left: 2rem;
+    margin-right: 2rem;
     float: center;
   }
 }
@@ -181,11 +183,11 @@
  */
 .site-body {
   display: grid;
-  grid-template-columns: calc(#{$content-width} * 0.14) 1fr;
+  grid-template-columns: calc(#{$content-width} * 0.24) 1fr;
   overflow: hidden;
 
   @include media-query($on-medium) {
-    grid-template-columns: calc(#{$content-width} * 0.09) 1fr;
+    grid-template-columns: calc(#{$content-width} * 0.18) 1fr;
   }
 
   @include media-query($on-small) {
@@ -197,13 +199,14 @@
  * Site sidebar
  */
 .site-sidebar {
-  padding: $spacing-unit;
+  margin-top: $spacing-unit * 0.7;
+  padding: $spacing-unit * 0.25;
   border-right: 1px solid;
   @include relative-font-size(0.8);
 
   @include media-query($on-medium) {
-    padding: $spacing-unit / 2;
-    @include relative-font-size(0.6);
+    padding: $spacing-unit * 0.25;
+    @include relative-font-size(0.8);
   }
 
   @include media-query($on-small) {
@@ -229,6 +232,18 @@
   }
 }
 
+.sidebar-section>p {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-section>ul {
+  margin-bottom: 0;
+}
+
+.sidebar-section>ul>li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
 .sidebar-icon {
   margin-right: 0.5em;
 }
@@ -250,15 +265,8 @@ ul.contact-list {
   }
 }
 
-ul.social-icons {
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 0;
-
-  > li {
-    display: inline-block;
-    margin: 0.3em;
-  }
+p.social-icons {
+  font-size: $base-font-size * 1.2;
 }
 
 .author-avatar {
@@ -350,11 +358,11 @@ ul.social-icons {
  * Homepage
  */
 .home {
-  margin-top: $spacing-unit;
+  margin-top: $spacing-unit * 0.7;
 }
 
 .post-list {
-  font-family: $headline-font-family;
+  font-family: $post-title-font-family;
   margin-left: 0;
   padding-left: 0;
   list-style: none;
@@ -499,12 +507,9 @@ ul.post-categories {
   }
 }
 
-
-// About font sizes for h1-h6, refer to https://stackoverflow.com/a/6140504/13261366
-.post-title,
-.post-content h1 {
-  @include relative-font-size(1.8);
-  font-family: $headline-font-family;
+.post-title {
+  @include relative-font-size(2);
+  font-family: $post-title-font-family;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: $base-line-height * $base-font-size * 2;
@@ -514,24 +519,29 @@ ul.post-categories {
   }
 }
 
+// About font sizes for h1-h6, refer to https://stackoverflow.com/a/6140504/13261366
 .post-content {
-  font-family: $reading-font-family;
+  font-family: $post-content-font-family;
   margin-bottom: $spacing-unit;
 
-  h2, h3, h4, h5, h6 {
-    font-family: $headline-font-family;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $post-heading-font-family;
   }
 
-  h2         { margin-top: $spacing-unit * 1.4 }
+  h1         { margin-top: $spacing-unit * 1.7 }
+  h2         { margin-top: $spacing-unit * 1.5 }
+  h2         { margin-top: $spacing-unit * 1.35 }
   h3         { margin-top: $spacing-unit * 1.2 }
   h4, h5, h6 { margin-top: $spacing-unit }
 
-  h2 {
-    @include relative-font-size(1.4);
+  h1 {
+    // I purposely make this smaller than the recommended (2.00) because the
+    // post title is 2x and h1's really shouldn't be larger than the title.
+    @include relative-font-size(1.80);
+  }
 
-    @media screen and (min-width: $on-large) {
-      @include relative-font-size(1.5);
-    }
+  h2 {
+    @include relative-font-size(1.50);
   }
 
   h3 {
@@ -539,7 +549,7 @@ ul.post-categories {
   }
 
   h4 {
-    @include relative-font-size(1.12);
+    @include relative-font-size(1.00);
   }
 
   h5 {
@@ -547,7 +557,7 @@ ul.post-categories {
   }
 
   h6 {
-    @include relative-font-size(0.75);
+    @include relative-font-size(0.67);
   }
 
   li {
@@ -583,6 +593,7 @@ ul.post-categories {
   .taxonomy {
     display: flex;
     padding: 0.25em 0;
+    gap: 1em;
     justify-content: space-between;
     color: inherit;
     text-decoration: none;
@@ -642,7 +653,7 @@ figcaption.align-center {
  * Site footer
  */
 .site-footer {
-  margin-top: $spacing-unit * 2;
+  // margin-top: $spacing-unit;
   border-top: 1px solid;
   padding: $spacing-unit 0;
   @include relative-font-size(0.8);
