@@ -23,15 +23,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   A blog for the Foroozandeh group at Oxford.
 baseurl: ""   # the subpath of your site, e.g. /blog
 url: "https://foroozandehgroup.github.io"
-github_username:  foroozandehgroup
+github_username: "foroozandehgroup"
 subscribe: false
+# avatar: "/assets/images/website_logo_ox_6.png"
 
 # Build settings
 # theme: jekyll-theme-hamilton  # Hamilton is not natively supported by GH pages...
 plugins:
   - jekyll-feed
   - jekyll-theme-hamilton
-remote_theme: ngzhio/jekyll-theme-hamilton  # ...this is the workaround.
+remote_theme: zivong/jekyll-theme-hamilton  # ...this is the workaround.
 skin: daylight
 
 # Default global variables for every post, see
