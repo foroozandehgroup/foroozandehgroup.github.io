@@ -55,6 +55,22 @@ The theme can be changed or customised in the `_config.yml` file: in there you c
 
 -----------
 
+**Adding an image to a post**
+
+1. Put your image in the `assets/images` directory. If you plan to have a series of images it's probably a good idea to make a subdirectory for yourself.
+
+2. In the Markdown file, you can use either Markdown syntax:
+
+   `![Alt text](/assets/images/my_image.png)`
+
+   or raw HTML, which gives you more control over width, height, and other properties:
+
+   `<img src="/assets/images/my_image.png">` 
+
+   Note that in both cases, the very first forward slash ensures that the path is resolved from the top-level directory. This is important! Or else you might have some difficulty finding the correct relative path.
+
+-----------
+
 **Publishing changes online**
 
 Commit the files and push to the `master` branch of this repository. GitHub will automatically build the website and deploy at https://foroozandehgroup.github.io.

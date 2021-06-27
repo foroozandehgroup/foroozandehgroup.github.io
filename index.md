@@ -3,7 +3,7 @@ layout: home
 ---
 
 <div style="text-align: center">
-<img src="website_logo_ox_6.png" alt="Foroozandeh group logo: magnetic resonance, spectroscopy, methodology, metrology" />
+<img src="/assets/images/website_logo_ox_6.png" alt="Foroozandeh group logo: magnetic resonance, spectroscopy, methodology, metrology" />
 <br />
 <br />
 </div>
