@@ -20,16 +20,19 @@ $handwriting-font-family: "Lato", !default;
 
 $base-font-size:    18px !default;
 $code-font-size:    16px !default;
-$base-line-height:  1.5 !default;
+$base-line-height:  1.4 !default;
 
 
 ////////////
 // Layout //
 ////////////
 
-$spacing-unit:      2rem !default;
+$spacing-unit:      1.5rem !default;
 $content-width:     1100px !default;
 
+// Max screen size that is considered 'small'. This affects layouts, for
+// example, the sidebar disappears when the screen size is below this.
 $on-small:          600px !default;
+// Same for medium and large.
 $on-medium:         900px !default;
 $on-large:          1100px !default;

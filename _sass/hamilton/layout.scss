@@ -128,7 +128,6 @@
   }
 
   .current-page {
-    // This is the only line that was changed!
     // text-decoration: line-through;
   }
 
@@ -182,11 +181,11 @@
  */
 .site-body {
   display: grid;
-  grid-template-columns: calc(#{$content-width} * 0.14) 1fr;  // changed from 0.24
+  grid-template-columns: calc(#{$content-width} * 0.14) 1fr;
   overflow: hidden;
 
   @include media-query($on-medium) {
-    grid-template-columns: calc(#{$content-width} * 0.09) 1fr;  // changed from 0.18
+    grid-template-columns: calc(#{$content-width} * 0.09) 1fr;
   }
 
   @include media-query($on-small) {
@@ -415,10 +414,10 @@ ul.social-icons {
  * Posts
  */
 .post-header {
-  padding-top: $spacing-unit * 2;
-  padding-bottom: $spacing-unit;
+  padding-top: $spacing-unit * 1.5;
+  padding-bottom: $spacing-unit * 0.8;
   border-bottom: 1px solid;
-  margin-bottom: $spacing-unit * 2;
+  margin-bottom: $spacing-unit * 1.5;
   text-align: center;
 }
 
@@ -523,8 +522,8 @@ ul.post-categories {
     font-family: $headline-font-family;
   }
 
-  h2         { margin-top: $spacing-unit * 2 }
-  h3         { margin-top: $spacing-unit * 1.5 }
+  h2         { margin-top: $spacing-unit * 1.4 }
+  h3         { margin-top: $spacing-unit * 1.2 }
   h4, h5, h6 { margin-top: $spacing-unit }
 
   h2 {
