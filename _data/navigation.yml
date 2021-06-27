@@ -1,5 +1,8 @@
 # This YAML file contains links at the topright of the page.
 # See the readme of https://github.com/ngzhio/jekyll-theme-hamilton
 # for more information.
- - title: About
-   url: /about/
+
+- title: About
+  url: /about/
+- title: Tags
+  url: /tags/
