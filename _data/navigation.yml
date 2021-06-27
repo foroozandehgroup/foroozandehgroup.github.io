@@ -2,6 +2,8 @@
 # See the readme of https://github.com/ngzhio/jekyll-theme-hamilton
 # for more information.
 
+- title: Home
+  url: /
 - title: About
   url: /about/
 - title: Tags
