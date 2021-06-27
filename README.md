@@ -30,17 +30,26 @@ The links above have more detailed descriptions.
 1. Install Ruby, Bundler, and Jekyll on your own system (follow [these instructions](https://jekyllrb.com/docs/installation/)).
 2. Clone this repository and `cd` into it.
 3. Run `bundle exec jekyll serve`. This should launch a local HTTP server on port 4000, which can be accessed by navigating to 127.0.0.1:4000 or localhost:4000 on a browser of choice.
-4. If you edit any of the source code (_apart from_ `_config.yml`), the server will automatically detect the changes and refresh.
+4. If you edit any of the source code (_apart from_ `_config.yml`), the server will automatically detect the changes and refresh. If you edit `_config.yml`, you will have to terminate the `bundle` process and rerun it.
+
+-----------
+
+**Changing the front page**
+
+Edit the `index.md` file. Note that many of the things are automatically filled in for you by the theme.
+
+The current theme is called `hamilton`; there are quite a few others which are available.
+The theme can be changed or customised in the `_config.yml` file: in there you can also change information such as the email address, etc. in the footer.
 
 -----------
 
 **Adding a new post**
 
-Create a new file in the `_posts` directory called `YYYY-MM-DD-title.md`. (The title can be anything you like, but it will be turned into the URL of the website so probably a good idea to choose something sensible.)
+1. Create a new file in the `_posts` directory called `YYYY-MM-DD-title.md`. (The title can be anything you like, but it will be turned into the URL of the website so probably a good idea to choose something sensible.)
 
-Include some *front matter* at the top of the post: this includes information such as the title of the post, which Jekyll will use to create a heading. You can see how this works in any of the existing posts in that directory.
+2. Include some *front matter* at the top of the post: this includes information such as the title of the post, which Jekyll will use to create a heading. You can see how this works in any of the existing posts in that directory.
 
-After the front matter, you can include any Markdown / Liquid code that you want. See https://jekyllrb.com/docs/posts/ for more information.
+3. After the front matter, you can include any Markdown / Liquid code that you want. See https://jekyllrb.com/docs/posts/ for more information.
 
 (_This_ markdown file, `README.md`, does not contain any front matter and is therefore not parsed by Jekyll; it only serves as a readme on the GitHub repo itself.)
 
@@ -48,4 +57,4 @@ After the front matter, you can include any Markdown / Liquid code that you want
 
 **Publishing changes online**
 
-Commit the files and push to the master branch of this repository. GitHub will automatically build the website and deploy at https://foroozandehgroup.github.io.
+Commit the files and push to the `master` branch of this repository. GitHub will automatically build the website and deploy at https://foroozandehgroup.github.io.

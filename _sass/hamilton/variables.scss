@@ -1,14 +1,32 @@
-// Fonts
-$base-font-family: "Open Sans" !default;
-$reading-font-family: "Roboto Slab", "Noto Serif SC", "Noto Serif TC" !default;
-$headline-font-family: Roboto, "Noto Sans SC", "Noto Sans TC" !default;
-$code-font-family:  "Roboto Mono" !default;
-$handwriting-font-family: "Open Sans", !default;
+///////////
+// Fonts //
+///////////
+
+// Please keep the !default as the last option, it ensures sensible output!
+// Custom fonts can be provided by Google Fonts, please edit _includes/head.html
+// to set this up (Google Fonts will give you a bunch of HTML code to load the
+// fonts and you can just copy-paste this in directly)
+
+// Non-header text on index.md
+$base-font-family: "Lato" !default;
+// Plain text in posts
+$reading-font-family: "Lato", !default;
+// Post headings, as well as post preview in front page
+$headline-font-family: "Lato", !default;
+// Monospace font for all code
+$code-font-family:  "Fira Mono" !default;
+// Website header in index.md (theme-dependent)
+$handwriting-font-family: "Lato", !default;
+
 $base-font-size:    18px !default;
 $code-font-size:    16px !default;
 $base-line-height:  1.5 !default;
 
-// Layouts
+
+////////////
+// Layout //
+////////////
+
 $spacing-unit:      2rem !default;
 $content-width:     1100px !default;
 
