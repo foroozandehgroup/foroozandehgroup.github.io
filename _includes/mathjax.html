@@ -1,12 +1,27 @@
 <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script>
 MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
-  svg: {
-    fontCache: 'global'
-  }
+    loader: {
+        load: ['[tex]/mhchem'],
+    },
+    tex: {
+        packages: {'[+]': ['mhchem']},
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        // for macros see http://docs.mathjax.org/en/latest/input/tex/macros.html
+        macros: {
+            proton: "{^{1}\\ce{H}}",
+            carbon: "{^{13}\\ce{C}}",
+        },
+    },
+    svg: {
+        scale: 0.93,
+        fontCache: 'global',
+    },
+    chtml: {
+        scale: 0.93,
+        // exFactor determined using https://stackoverflow.com/a/49722065
+        exFactor: 0.449,
+    },
 };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>

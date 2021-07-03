@@ -100,6 +100,21 @@ a {
   }
 }
 
+
+a.nocolor {
+  // default from _sass/hamilton/skins/daylight.scss
+  $text-color: #111 !default;
+
+  color: $text-color;
+  &:visited {
+    color: $text-color;
+  }
+  &:hover {
+    color: $text-color;
+    text-decoration-thickness: 8%;
+  }
+}
+
 /**
  * Blockquotes
  */
