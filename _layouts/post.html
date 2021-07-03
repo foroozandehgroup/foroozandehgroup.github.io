@@ -87,14 +87,27 @@ layout: default
   </footer>
 
   <script>
+  // Adds hyperlinks to post headings, allowing Wikipedia-style navigation.
+
   // from https://stackoverflow.com/a/40475478, manually modified to
-  // add link_no_color class
+  // add link_no_color class (so that headings don't all appear blue)
   let headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
 
-  for (let i = 0; i < headings.length; i++) {
-      headings[i].innerHTML =
-          '<a class="nocolor" href="#' + headings[i].id + '">' + headings[i].innerText + '</a>';
+  for (let heading of headings) {
+      heading.innerHTML =
+          `<a class="nocolor" href="#${heading.id}">${heading.innerText}</a>`;
   }
+  // need this to fix bugs with Chrome anchor tags not working
+  // taken from https://stackoverflow.com/a/38588927
+  document.addEventListener('DOMContentLoaded', function () {
+      const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+      if (window.location.hash && isChrome) {
+          setTimeout(function () {
+              var hash = window.location.hash;
+              window.location.hash = "";
+              window.location.hash = hash;
+          }, 200);
+      }});
   </script>
 
   {% if page.comments != false and jekyll.environment == "production" and site.disqus %}
