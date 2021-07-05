@@ -418,6 +418,23 @@ p.social-icons {
   }
 }
 
+// Custom 'note' block
+div.note {
+  padding: $spacing-unit * 0.5;
+  margin: $spacing-unit * 0.5;
+  margin-bottom: $spacing-unit * 0.7;
+  border: 3px solid #111;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+}
+div.note>p:first-child {
+  @include relative-font-size(1.2);
+}
+div.note>p:last-child {
+  margin-bottom: 0px;
+}
+
+
 /**
  * Posts
  */
