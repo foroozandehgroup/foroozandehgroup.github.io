@@ -433,6 +433,11 @@ div.note>p:first-child {
 div.note>p:last-child {
   margin-bottom: 0px;
 }
+// Custom centred block (for images)
+div.centred {
+  text-align: center;
+  margin-bottom: $spacing-unit;
+}
 
 
 /**
