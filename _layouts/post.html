@@ -103,9 +103,10 @@ layout: default
       const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
       if (window.location.hash && isChrome) {
           setTimeout(function () {
-              var hash = window.location.hash;
-              window.location.hash = "";
-              window.location.hash = hash;
+              const hash = window.location.hash;
+              // don't use window.location.hash = hash
+              // because this adds extra entries to browser history
+              window.location.replace(hash);
           }, 200);
       }});
   </script>
