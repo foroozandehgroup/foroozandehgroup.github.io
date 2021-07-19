@@ -423,9 +423,17 @@ div.note {
   padding: $spacing-unit * 0.5;
   margin: $spacing-unit * 0.5;
   margin-bottom: $spacing-unit * 0.7;
+  // By default this is a grey background
   border: 3px solid #111;
   border-radius: 10px;
-  background-color: #f3f3f3;
+  background-color: #f5f5f5;
+}
+// But can be customised for specific headings
+div.note.Exercise {
+  background-color: #fff2fc;
+}
+div.note.Tip {
+  background-color: #e7fae3;
 }
 div.note>p:first-child {
   @include relative-font-size(1.2);
