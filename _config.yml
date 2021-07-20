@@ -35,7 +35,7 @@ plugins:
 remote_theme: zivong/jekyll-theme-hamilton  # ...this is the workaround.
 skin: daylight
 
-paginate: 5
+paginate: 10
 
 # Default global variables for every post, see
 # https://jekyllrb.com/docs/configuration/front-matter-defaults/
